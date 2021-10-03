@@ -32,7 +32,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('c339a2b62761581e8218988a5b33ea34.png')
+set_png_as_page_bg('pexels-photo-1660898.png')
 
 st.title("IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
