@@ -34,7 +34,7 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('imageedit_3_7610295597.png')
 
-LOGO_IMAGE = "iiee.png"
+LOGO_IMAGE = "iiee-removebg-preview.png"
 
 st.markdown(
     """
