@@ -66,7 +66,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("  IoT Based Crop Monitoring and Analysis")
+st.title("ㅤ  IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
 #faceCascade = cv2.CascadeClassifier(cv2.haarcascades+'haarcascade_frontalface_default.xml')
 ### load file
