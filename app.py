@@ -34,6 +34,38 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('imageedit_3_7610295597.png')
 
+LOGO_IMAGE = "iiee.png"
+
+st.markdown(
+    """
+    <style>
+    .container {
+        display: flex;
+    }
+    .logo-text {
+        font-weight:700 !important;
+        font-size:50px !important;
+        color: #f9a01b !important;
+        padding-top: 75px !important;
+    }
+    .logo-img {
+        float:right;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <div class="container">
+        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
+        <p class="logo-text">Logo Much ?</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
 #faceCascade = cv2.CascadeClassifier(cv2.haarcascades+'haarcascade_frontalface_default.xml')
