@@ -4,18 +4,19 @@ import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_input as mobilenet_v2_preprocess_input
-from flask import Flask, render_template, Response, request
-import datetime, time
-import os, sys
-import numpy as np
-from threading import Thread
+#from flask import Flask, render_template, Response, request
+#import datetime, time
+#import os, sys
+#import numpy as np
+#from threading import Thread
 
+st.title("Crop Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
 #faceCascade = cv2.CascadeClassifier(cv2.haarcascades+'haarcascade_frontalface_default.xml')
 ### load file
 uploaded_file = st.file_uploader("Choose a image file", type="jpg")
 
-st.title("Crop Analysis")
+
 map_dict = {0: 'Apple scab',
             1: 'Apple Black rot',
             2: 'Apple Cedar apple rust',
