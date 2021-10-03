@@ -1,0 +1,4 @@
+streamlit==0.89.0
+numpy
+tensorflow
+opencv-python
