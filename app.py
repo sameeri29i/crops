@@ -44,9 +44,9 @@ st.markdown(
     }
     .logo-text {
         font-weight:700 !important;
-        font-size:35px !important;
+        font-size:40px !important;
         color: #ffffff !important;
-        padding-top: 5px !important;
+        padding-top: 0px !important;
     }
     .logo-img {
         float:right;
@@ -60,7 +60,7 @@ st.markdown(
     f"""
     <div class="container">
         <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-        <p class="logo-text"> <br> Institute Of Industrial Electronics Engineering</p>
+        <p class="logo-text"> Institute Of Industrial Electronics Engineering</p>
     </div>
     """,
     unsafe_allow_html=True
