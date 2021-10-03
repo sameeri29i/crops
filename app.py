@@ -19,14 +19,14 @@ def set_background(png_file):
     page_bg_img = '''
     <style>
     body {
-    background-image: url("data:image/png;base64,%s");
+    background-image: url("https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_960_720.png;base64,%s");
     background-size: cover;
     }
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('./src/static/img/background.png')
+set_background('https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_960_720.png')
 
 
 st.title("Crop Analysis")
