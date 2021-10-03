@@ -10,13 +10,16 @@ from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_in
 #import numpy as np
 #from threading import Thread
 
-def get_base64(bin_file):
+import base64
+
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-def set_background(png_file):
-    bin_str = get_base64(png_file)
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
     page_bg_img = '''
     <style>
     body {
@@ -25,10 +28,11 @@ def set_background(png_file):
     }
     </style>
     ''' % bin_str
+    
     st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
 
-set_background('vine-1948358_960_720.png')
-
+set_png_as_page_bg('vine-1948358_960_720.png')
 
 st.title("IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
