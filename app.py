@@ -70,7 +70,7 @@ st.title("ㅤ  IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
 #faceCascade = cv2.CascadeClassifier(cv2.haarcascades+'haarcascade_frontalface_default.xml')
 ### load file
-uploaded_file = st.file_uploader("Choose a image file", type="jpg")
+uploaded_file = st.file_uploader("Choose a image file")
 
 
 map_dict = {0: 'Apple scab',
