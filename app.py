@@ -9,20 +9,25 @@ from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_in
 #import os, sys
 #import numpy as np
 #from threading import Thread
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-st.markdown(
-   
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
     <style>
-    .reportview-container {
-        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
-    }
-   .sidebar .sidebar-content {
-        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
     }
     </style>
-    ,
-    unsafe_allow_html=True
-)
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background('./src/static/img/background.png')
+
 
 st.title("Crop Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
