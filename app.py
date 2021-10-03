@@ -5,7 +5,6 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_input as mobilenet_v2_preprocess_input
 from flask import Flask, render_template, Response, request
-import cv2
 import datetime, time
 import os, sys
 import numpy as np
