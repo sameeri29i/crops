@@ -49,7 +49,7 @@ st.markdown(
         padding-top: 0px !important;
     }
     .logo-img {
-        float:right;
+        float:left;
     }
     </style>
     """,
