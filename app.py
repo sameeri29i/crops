@@ -60,13 +60,13 @@ st.markdown(
     f"""
     <div class="container">
         <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-        <p class="logo-text"> <br> Institute Of Industrial Electronics Engineering</p>
+        <p class="logo-text"> <br> ㅤㅤInstitute Of Industrial Electronics Engineering</p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.title("ㅤ ㅤㅤ IoT Based Crop Monitoring and Analysis")
+st.title("ㅤㅤㅤ ㅤㅤ IoT Based Crop Monitoring and Analysis")
 model = tf.keras.models.load_model("fypmodel3.h5")
 #faceCascade = cv2.CascadeClassifier(cv2.haarcascades+'haarcascade_frontalface_default.xml')
 ### load file
